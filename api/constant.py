@@ -22,8 +22,6 @@ RESOURCES_DIR= BASE_DIR /  "api" / "resources"
 DATE_TIME_FORMAT = '%Y-%m-%d %H:%M:%S'
 DB_RESULT_DATE_TIME_FORMAT = '%Y-%m-%dT%H: %M: %S'
 
-# Recording Time
-RECORDING_TIME = int(os.environ.get('RECORDING_TIME'))
 
 
 RATES_URL=os.environ.get("RATES_URL", "https://boj.org.jm/statistics/real-sector/inflation/")
