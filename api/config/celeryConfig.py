@@ -48,9 +48,7 @@ class CeleryConfig(object):
     beat_schedule = {
         "monthly-scraping": {
             "task": "api.tasks.scrape_inflation.scrape",
-            "schedule": crontab(
-                minute=0, hour=0, day_of_month=1, month_of_year="*", day_of_week="*"
-            ),
+            "schedule":600,
         }
     }
 

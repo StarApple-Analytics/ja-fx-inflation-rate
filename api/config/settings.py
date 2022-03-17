@@ -11,4 +11,4 @@ load_dotenv()
 
 REDIS_HOST = environ.get("REDIS_HOST")
 REDIS_PORT = environ.get("REDIS_PORT")
-REDIS_DB = environ.get("REDIS_DB")
+REDIS_PASS = environ.get("REDIS_PASS")

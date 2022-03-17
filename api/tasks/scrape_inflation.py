@@ -42,10 +42,11 @@ def scrape():
         timeseries_df = timeseries_to_df(df)
         timeseries = df_to_timestamps(timeseries_df)
         
-        
-        return rts.madd(timeseries)
+        rts.madd(timeseries)
+        return [timeseries]
     except Exception as e:
         logger.error(e)
+        print(e)
 
 
 def match_class(target):
@@ -85,4 +86,4 @@ def df_to_timestamps(timeseries_df):
 
 
 if __name__ == "__main__":
-    scrape()
+    print(scrape())
