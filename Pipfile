@@ -17,6 +17,7 @@ xlrd = "*"
 gevent = "*"
 flask-swagger-ui = "*"
 gunicorn = "*"
+supervisor = "*"
 
 [dev-packages]
 black = "*"
