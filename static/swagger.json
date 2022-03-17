@@ -1,0 +1,80 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "description": "API for interacting with Jamaica FX Inflation Rates",
+    "version": "1.0.0",
+    "title": "Jamaica FX Inflation Rates",
+    "contact": {
+      "email": "tahjyei@starapple.ai"
+    },
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  },
+  "servers": [
+    {
+      "url": "/api/"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Jamaica FX Inflation Rates",
+      "description": "Fetching Monthly FX Inflation Rates for Jamaica"
+    }
+  ],
+  "paths": {
+    "/timeseries/rates": {
+      "get": {
+        "tags": ["Monthly Timeseries Data on Jamaica's Inflation Rate"],
+        "summary": "Return Timeseries Data, timestamps in epoch",
+        "parameters": [
+          {
+            "in": "query",
+            "required": true,
+            "name": "from_time",
+            "schema": {
+              "type": "number"
+            }
+          },
+          {
+            "in": "query",
+            "required": true,
+            "name": "to_time",
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/components/schemas/timestamps"
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "timestamps": {
+        "properties": {
+          "date_ranges": {
+            "type": "array",
+            "items": [
+              {
+                "type": "number",
+                "format": "float"
+              }
+            ]
+          },
+          "metric": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

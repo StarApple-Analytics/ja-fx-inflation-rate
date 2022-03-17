@@ -1,0 +1,28 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+flask = "*"
+pandas = "*"
+celery = "*"
+flask-cli = "*"
+flask-cors = "*"
+python-dotenv = "*"
+redistimeseries = "*"
+beautifulsoup4 = "*"
+requests = "*"
+xlrd = "*"
+gevent = "*"
+flask-swagger-ui = "*"
+gunicorn = "*"
+
+[dev-packages]
+black = "*"
+
+[requires]
+python_version = "3.8"
+
+[pipenv]
+allow_prereleases = true
